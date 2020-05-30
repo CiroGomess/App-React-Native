@@ -14,6 +14,13 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'center',
         padding: 20
-      
+    },
+
+    Imcrementar:{
+        alignSelf: 'center',
+        backgroundColor: '#ff3c49',
+        padding: 20,
+        color:'#fff',
+        borderRadius: 5,
     }
 })

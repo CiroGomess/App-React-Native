@@ -6,8 +6,16 @@ import { NavigationContainer } from '@react-navigation/native'
 import SimplesJS from './components/Simples'
 import ParImpar from './components/ParImpar'
 import { Inverte, MegaSena } from './components/Mult'
+import Contador from './components/Contador'
 
 const Drawer = createDrawerNavigator()
+
+
+function ContadorScreen({ navigation }) {
+    return(
+        <Contador numeroInicial={100}></Contador>
+    )
+}
 
 function MegaSenaScreen({ navigation }) {
     return (
@@ -29,7 +37,7 @@ function SimplesScreen({ navigation }) {
     return (
         <SimplesJS texto='Flexível!!' />
     );
-}  
+}
 
 
 
@@ -37,6 +45,7 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Contador" component={ContadorScreen} />
                 <Drawer.Screen name="Mega Sena" component={MegaSenaScreen} />
                 <Drawer.Screen name="Inverter" component={InverterScreen} />
                 <Drawer.Screen name="Par e Ímpar" component={ParImparScreen} />
