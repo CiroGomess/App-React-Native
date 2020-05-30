@@ -22,5 +22,6 @@ export default StyleSheet.create({
         padding: 20,
         color:'#fff',
         borderRadius: 5,
+        marginTop: 10
     }
 })

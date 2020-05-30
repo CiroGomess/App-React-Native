@@ -13,6 +13,10 @@ export default class Contador extends Component {
         this.setState({ numero: this.state.numero + 1 })
     }
 
+    menosUm = () => {
+        this.setState({ numero: this.state.numero - 1 })
+    }
+
 
     limpar = () => {
         this.setState({ numero: this.props.numeroInicial })
@@ -28,6 +32,9 @@ export default class Contador extends Component {
 
                 <TouchableOpacity onPress={this.maisUm} onLongPress={this.limpar}>
                     <Text style={Padrao.Imcrementar}>Incrementar/ Limpar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.menosUm}>
+                    <Text style={Padrao.Imcrementar}>Menos 1</Text>
                 </TouchableOpacity>
 
             </View >

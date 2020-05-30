@@ -7,13 +7,19 @@ import SimplesJS from './components/Simples'
 import ParImpar from './components/ParImpar'
 import { Inverte, MegaSena } from './components/Mult'
 import Contador from './components/Contador'
+import Plataformas from './components/Plataformas'
 
 const Drawer = createDrawerNavigator()
 
 
+function PlataformaScreen({ navigation }) {
+    return (
+        <Plataformas />
+    )
+}
 function ContadorScreen({ navigation }) {
-    return(
-        <Contador numeroInicial={100}></Contador>
+    return (
+        <Contador numeroInicial={0}></Contador>
     )
 }
 
@@ -45,6 +51,7 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Plataforma" component={PlataformaScreen} />
                 <Drawer.Screen name="Contador" component={ContadorScreen} />
                 <Drawer.Screen name="Mega Sena" component={MegaSenaScreen} />
                 <Drawer.Screen name="Inverter" component={InverterScreen} />
