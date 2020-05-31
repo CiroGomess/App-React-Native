@@ -16,12 +16,25 @@ export default StyleSheet.create({
         padding: 20
     },
 
-    Imcrementar:{
+    Imcrementar: {
         alignSelf: 'center',
         backgroundColor: '#ff3c49',
         padding: 20,
-        color:'#fff',
+        color: '#fff',
         borderRadius: 5,
         marginTop: 10
+    },
+    input: {
+        height: 70,
+        fontSize: 40,
+        borderColor: '#ff3c49',
+        borderWidth: 1,
+        width: '85%',
+        alignSelf: 'center',
+        borderRadius: 5,
+        paddingHorizontal: 5
+    },
+    font40: {
+        fontSize: 40
     }
 })

@@ -9,9 +9,25 @@ import { Inverte, MegaSena } from './components/Mult'
 import Contador from './components/Contador'
 import Plataformas from './components/Plataformas'
 import ValidarProps from './components/ValidarProps'
+import Evento from './components/Evento'
+import Avo from './components/ComunicacaoDireta'
+
 
 const Drawer = createDrawerNavigator()
 
+
+
+
+function AvoScreen({ navigation }) {
+    return (
+        <Avo nome='João' sobrenome='Silva' />
+    )
+}
+function EventoScreen({ navigation }) {
+    return (
+        <Evento />
+    )
+}
 
 function ValidarPropsScreen({ navigation }) {
     return (
@@ -59,6 +75,8 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Cominucação direta" component={AvoScreen} />
+                <Drawer.Screen name="Evento" component={EventoScreen} />
                 <Drawer.Screen name="Validando Props" component={ValidarPropsScreen} />
                 <Drawer.Screen name="Plataforma" component={PlataformaScreen} />
                 <Drawer.Screen name="Contador" component={ContadorScreen} />
