@@ -11,6 +11,7 @@ import Plataformas from './components/Plataformas'
 import ValidarProps from './components/ValidarProps'
 import Evento from './components/Evento'
 import Avo from './components/ComunicacaoDireta'
+import  TextoSincronizado  from './components/ComunicacaoIndereta'
 
 
 const Drawer = createDrawerNavigator()
@@ -18,11 +19,17 @@ const Drawer = createDrawerNavigator()
 
 
 
+function TextoSincroScreen({ navigation }) {
+    return (
+        <TextoSincronizado />
+    )
+}
 function AvoScreen({ navigation }) {
     return (
         <Avo nome='João' sobrenome='Silva' />
     )
 }
+
 function EventoScreen({ navigation }) {
     return (
         <Evento />
@@ -75,6 +82,7 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
+                <Drawer.Screen name="Texto sincronizado" component={TextoSincroScreen} />
                 <Drawer.Screen name="Cominucação direta" component={AvoScreen} />
                 <Drawer.Screen name="Evento" component={EventoScreen} />
                 <Drawer.Screen name="Validando Props" component={ValidarPropsScreen} />
