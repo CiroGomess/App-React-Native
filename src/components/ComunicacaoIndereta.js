@@ -10,7 +10,8 @@ export const Entrada = props =>
     </View>
 
 export default class TextoSincronizado extends Component {
-
+  
+    
     state = {
         texto: ''
     }
