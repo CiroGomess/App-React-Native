@@ -13,13 +13,20 @@ import Evento from './components/Evento'
 import Avo from './components/ComunicacaoDireta'
 import TextoSincronizado from './components/ComunicacaoIndereta'
 import ListaFlex from './components/ListaFlex'
+import Flex from './components/Flex'
 
 
 const Drawer = createDrawerNavigator()
 
 
 
-function LisataFlexScreen({ navigation }) {
+function FlexScreen({ navigation }) {
+    return (
+        <Flex />
+    )
+}
+
+function ListaFlexScreen({ navigation }) {
     return (
         <ListaFlex />
     )
@@ -89,7 +96,8 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator>
-                <Drawer.Screen name="Lista Flex" component={LisataFlexScreen} />
+                <Drawer.Screen name="Flex" component={FlexScreen} />
+                <Drawer.Screen name="Lista Flex" component={ListaFlexScreen} />
                 <Drawer.Screen name="Texto sincronizado" component={TextoSincroScreen} />
                 <Drawer.Screen name="Cominucação direta" component={AvoScreen} />
                 <Drawer.Screen name="Evento" component={EventoScreen} />

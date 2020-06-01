@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, View, FlatList, Text } from 'react-native'
+import { View, FlatList, Text } from 'react-native'
 
 const alunos = [
     { id: 1, nome: 'João', nota: 7.9 },
@@ -29,7 +29,7 @@ const itemEstilo = {
     backgroundColor: '#DDD',
     borderWidth: 0.5,
     borderColor: '#222',
-    
+
     // Flex
     // justifyContent: 'space-around'
     alignItems: 'center',
@@ -51,9 +51,9 @@ export default props => {
     }
 
     return (
-        <ScrollView>
-            <FlatList data={alunos} renderItem={renderItem}
-                keyExtractor={(_, index) => index.toString()} />
-        </ScrollView>
+
+        <FlatList data={alunos} renderItem={renderItem}
+            keyExtractor={(_, index) => index.toString()} />
+
     )
 }
