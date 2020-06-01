@@ -11,7 +11,6 @@ export const Entrada = props =>
 
 export default class TextoSincronizado extends Component {
   
-    
     state = {
         texto: ''
     }
